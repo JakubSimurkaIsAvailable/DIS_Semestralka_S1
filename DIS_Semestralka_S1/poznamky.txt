@@ -1,0 +1,6 @@
+﻿je potrebne nejako vizualne znazorniť ktoru cestu sme zvolili?
+či teda to nejako zobraziť v UI
+alebo stačí len čas za ktory to kurier prešiel
+čo znamena teda že spravnosť modelu lahko preukazať, ako si to asi predstavuje
+
+kolko krat to generovat?

@@ -1,0 +1,26 @@
+﻿using DIS_Semestralka_S1.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DIS_Semestralka_S1.Generators.Components
+{
+    public class RozdelenieDiskretne 
+    {
+        int Min { get; set; }
+        int Max { get; set; }
+        Random random;
+        public RozdelenieDiskretne(Random generatorGeneratorov, int min, int max)
+        {
+            Min = min;
+            Max = max;
+            random = new Random(generatorGeneratorov.Next());
+        }
+        public int Generate()
+        {
+            return random.Next(Min, Max);
+        }
+    }
+}

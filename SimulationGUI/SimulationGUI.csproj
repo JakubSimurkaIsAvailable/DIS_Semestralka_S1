@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ScottPlot" Version="5.1.57" />
+    <PackageReference Include="ScottPlot.WinForms" Version="5.1.57" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DIS_Semestralka_S1\DIS_Semestralka_S1.csproj" />
+  </ItemGroup>
+
+</Project>

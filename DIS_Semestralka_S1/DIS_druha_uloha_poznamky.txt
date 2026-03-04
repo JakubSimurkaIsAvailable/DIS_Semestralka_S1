@@ -1,0 +1,29 @@
+pridat opis gui a vyhodnotenie tried
+potom opisat - pri takomto pocte replikacii som dostal taketo vysledky a tento vysledok je najlepsi
+
+
+mat to vypisane v nejakej tabulke teoretickty
+ked a to predcasne zastavi tak sa to vypise do tabulky ale s mensim poctom replikacii
+
+pri spusteni novej simulacie mozu byt nove generator, ale aj nemusia je to jedno
+
+v beforeSimulation mozu byt inicializovane nove generator, alebo v konstruktore,ale nie pred kazdou replikaciou
+
+
+
+uloha 2:
+ten isty kod ale nova uloha -- oooooo
+
+kurier chce byt v Ziline najneskor 7:35 a mal by byt v tom case v Ziline s 80% pravdepodobnostou, cize 80% pripadov bude v Ziline v tom case
+Otazka znie: kedy najneskor musi so ziliny vyrazit aby v 80% pripadov to stihol
+
+zoberieme najkratsi cas - najkratsiu variant
+
+cize tu si pamatame vysledky v ulohe 2 a zoberieme s nich 80 percent najkratsich, dostanem priemerny cas ktory odpocitam od 7:35, to je ten cas kedy najneskor musim vyrazit
+
+usporiadat a zobrat 80percentny najmensi prvok
+
+nemusim si pamatat vsetky replikacie - alternativna varianta
+prvy variant ide maximalnou rychlostou nespomaluje sa, druhy variant nemusi kreslit graf iba uklada vysledky a vyhodnoti
+
+zastavenie ma velky vyznam, vzdy osemdesiate percento je vysledok

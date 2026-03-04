@@ -1,0 +1,72 @@
+nahodne cisla nikdy nezahadzujeme - ked vygenerujem pouzijem
+nespomalovat tym generovanie 
+
+vytvorit pole generatorov, narpiklad ak mame 5 miest generator na 5, potom 4 tak generator na 4 a podobne..
+generatory nainicializujeme raz a uz ne reinicializujeme
+uz sa znovu neinicializuju, nikdy, ani v inych replikaciach
+
+generator seedov - inicializujeme casom - cezen nainicializujeme generatory casov - debugovatelne
+
+generator spojiteho a diskretneho empirickeho rozdelenia
+empiricke - sledovane javy
+
+v konstruktore nasada - nie
+
+v ciernom 6 instancii triedy random jeden na rozdelenie, dalsie na rychlosti
+posielame generator nasad do konstruktora triedy - ano
+
+simulacne jadro:
+cyklus while
+
+trieda MonteCarlo_Core
+public bool run;
+
+
+runsimulation(int replicationCount) {
+run = true;
+int currentReplication = 1;
+beforeSimulation();
+while(currentReplication < replicationCount && run == true) {
+	beforeReplication();
+	doReplication();
+	afterReplication();
+	currentReplication++;
+}
+afterSimulation();
+
+}
+
+spravit cez polymorfizmus - vo while bude nejaka virtualna funkcia, ktora bude predstavovat jednu replikaciu
+trebars public virtual void doReplication()
+
+spravime potomka jadra a prekryjeme doReplication
+
+inicializaciu tiez spravit virtualne
+virtual beforeReplication
+
+a 
+virtual beforeSimulation
+
+generator otestovat histogramom do excelu
+
+
+co zakaznik ocakava:
+graf:
+x os pocet replikacii
+y os ustalovanie casu
+
+nic co by obmedzilo pocet vykonanych replikacii
+aj spravne vyhodnotit a nakreslit grafy
+jednotlive vysvledky si nepamatame, ziadne pole s vysledkami tam nebude
+ak sa da zobrazit iba 1000 hodnot a chceme 1 000 000 tak zobrazujeme kazdych 1000 hodnot
+
+ma sa nazkalovat na tie hodnoty co tam budu
+y os nebude fixna
+minimalna hodnota je najviac na spodku, maximalna najviac navrchu
+
+
+uzivatel si nastavi kolko percent udajov sa nema zobrazovat
+cize pri 1 000 000 sa prvych 400 000 sa nezobrazi a vykreslujem kazdu 600 hodnotu
+
+v dokumentacii strucne spravit prvu stranu, popisat tam simulacne jadro a tie dva generatory empirickych rozdeleni
+
