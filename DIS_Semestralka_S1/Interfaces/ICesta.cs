@@ -11,7 +11,7 @@ namespace DIS_Semestralka_S1.Interfaces
     {
         int Dlzka { get; }
         FarbaCesty Farba { get; }
-        int Rychlost { get; }
+        double Rychlost { get; }
         bool K { get; }
         bool Kvychod { get; set; }
 
