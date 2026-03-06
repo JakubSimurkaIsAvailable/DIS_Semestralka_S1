@@ -27,7 +27,7 @@ namespace DIS_Semestralka_S1.Classes
             bool predchadzajucaK = false;
             foreach (var cesta in this.cesty)
             {
-                if(predchadzajucaK && cesta.K && casKuriera > 390)//6:30
+                if (predchadzajucaK && cesta.K && casKuriera > 385)//6:25
                 {
                     cesta.Kvychod = true;
                 }
@@ -35,7 +35,7 @@ namespace DIS_Semestralka_S1.Classes
                 casPrejazdu += casPrejazduCesty;
                 casKuriera += casPrejazduCesty;
                 cesta.Kvychod = false;
-                if(cesta.K && !predchadzajucaK)
+                if (cesta.K && !predchadzajucaK)
                 {
                     predchadzajucaK = true;
                 }
@@ -45,6 +45,10 @@ namespace DIS_Semestralka_S1.Classes
                 }
             }
             return casPrejazdu;
+        }
+        public void InvertujTrasu()
+        {
+            Array.Reverse(cesty);
         }
     }
 }

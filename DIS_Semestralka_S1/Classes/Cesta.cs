@@ -14,7 +14,7 @@ namespace DIS_Semestralka_S1.Classes
     {
         private int dlzka;
         private FarbaCesty farba;
-        private int rychlost;
+        private double rychlost;
         private bool k;
         private bool kvychod;
         private RozdelenieDiskretne cervenaCesta;
@@ -26,7 +26,7 @@ namespace DIS_Semestralka_S1.Classes
 
         public FarbaCesty Farba => farba;
 
-        public int Rychlost => rychlost;
+        public double Rychlost => rychlost;
 
         public bool K => k;
         public bool Kvychod => kvychod;
@@ -40,7 +40,7 @@ namespace DIS_Semestralka_S1.Classes
             this.kvychod = kvychod;
             int cervenaMin = 55;
             int cervenaMax = 75;
-            cervenaCesta = new RozdelenieDiskretne(generatorGeneratorov, cervenaMin, cervenaMax);
+            cervenaCesta = new RozdelenieDiskretne(generatorGeneratorov, cervenaMin, cervenaMax + 1);
             double zelenaMin = 50;
             double zelenaMax = 80;
             zelenaCesta = new RozdelenieSpojite(generatorGeneratorov, zelenaMin, zelenaMax);
@@ -63,7 +63,7 @@ namespace DIS_Semestralka_S1.Classes
             if(k && kvychod)
             {
                 double spomalenie = spomalenieK.Generate();
-                rychlost = rychlost - (rychlost * spomalenie / 100);
+                rychlost = rychlost * ((100-spomalenie)/100);
             }
             double cas = dlzka / rychlost * 60;
             return cas;
@@ -77,10 +77,10 @@ namespace DIS_Semestralka_S1.Classes
                     rychlost = cervenaCesta.Generate();
                     break;
                 case FarbaCesty.ZELENA:
-                    rychlost = (int)zelenaCesta.Generate();
+                    rychlost = zelenaCesta.Generate();
                     break;
                 case FarbaCesty.CIERNA:
-                    rychlost = (int)ciernaCesta.Generate();
+                    rychlost = ciernaCesta.Generate();
                     break;
                 case FarbaCesty.MODRA:
                     rychlost = modraCesta.Generate();
